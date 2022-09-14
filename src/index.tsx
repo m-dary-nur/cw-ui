@@ -18,6 +18,8 @@ type CarrywiseUiProps = {
 
 const ComponentName = 'CarrywiseUiView';
 
+export { default as Label } from './components/label';
+
 export const CarrywiseUiView =
   UIManager.getViewManagerConfig(ComponentName) != null
     ? requireNativeComponent<CarrywiseUiProps>(ComponentName)
