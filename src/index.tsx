@@ -18,7 +18,11 @@ type CarrywiseUiProps = {
 
 const ComponentName = 'CarrywiseUiView';
 
-export { default as Label } from './components/label';
+export { default as Button } from './components/Button';
+export { default as Checkbox } from './components/Checkbox';
+export { default as Icon } from './components/Icon';
+export { default as Label } from './components/Label';
+export { default as TextField } from './components/TextField';
 
 export const CarrywiseUiView =
   UIManager.getViewManagerConfig(ComponentName) != null
