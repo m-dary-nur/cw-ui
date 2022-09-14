@@ -1,5 +1,7 @@
 import React from 'react';
 import type { TextProps } from 'react-native';
+import cx from 'classnames';
+
 import { Text } from 'react-native';
 
 interface Props extends TextProps {
@@ -8,11 +10,11 @@ interface Props extends TextProps {
 }
 
 const Label: React.FC<Props> = ({ children, className, ...props }) => {
+  const cls = cx('font-default text-base text-gray-600', {
+    [`${className}`]: !!className,
+  });
   return (
-    <Text
-      className={`font-default text-base text-red-500 ${className}`}
-      {...props}
-    >
+    <Text className={cls} {...props}>
       {children}
     </Text>
   );
